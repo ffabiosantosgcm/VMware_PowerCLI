@@ -1,0 +1,1 @@
+Connect-VIServer -Server vcenter7.contoso.com.br -User administrator@vsphere.local -Password "P@ssw0rd"
