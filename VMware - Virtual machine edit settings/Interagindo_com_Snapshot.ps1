@@ -33,7 +33,7 @@ function show-menu {
 
 do {
    Show-Menu
-   $selecao = Read-Host "Por favor, faça uma seleção"
+   $selecao = Read-Host "Por favor, escolha uma opção"
    switch ($selecao) {
       '1' {
          Get-Snapshot -vm $vmname | select VM, Name, Created, age, SizeGB
