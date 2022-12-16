@@ -16,16 +16,17 @@ $scsi = read-host "Anotou na atapa anterior? Digite "SCSI Controller 0" ou "SCSI
  
 $vm = get-vm $vmname
 $Controller = $scsi
-$contador=0
+$contador = 0
 write-host "$listscsi"
  
 ### Adiciona uma quantidade de discos para VM
-while ($contador -lt $numero_discos){ # -lt menor que
+while ($contador -lt $numero_discos) {
+    # -lt menor que
 
     write-host "Adicionando $size VMDK para $vm"
 
-New-HardDisk -vm $vm -CapacityGB $size -Storageformat $formato -Controller $Controller
- $contador++
+    New-HardDisk -vm $vm -CapacityGB $size -Storageformat $formato -Controller $Controller
+    $contador++
 }
 
 # Próximos passos . . . .

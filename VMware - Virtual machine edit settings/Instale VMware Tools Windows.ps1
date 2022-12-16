@@ -5,7 +5,7 @@
 # vCenter 7
 
 # Primeira parte no VMware. Monta a ISO no SO.
-Import-Csv "D:\VMware_PowerCLI\instale_vmwaretools.csv" | ForEach-Object{
+Import-Csv "D:\VMware_PowerCLI\instale_vmwaretools.csv" | ForEach-Object {
     Get-VM $_.Name | Mount-Tools
 
 }

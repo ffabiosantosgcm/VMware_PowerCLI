@@ -12,8 +12,8 @@ $vmname = read-host "Qual o nome da VM?"
 
 write-host ("********** DISCOS LOCAIS DO SO **********")
 
-Get-VM -name $vmname| Get-VMGuest -PipelineVariable guest |
-where{$_.Disks -ne $null} |
+Get-VM -name $vmname | Get-VMGuest -PipelineVariable guest |
+where { $_.Disks -ne $null } |
 
 ForEach-Object -Process {
 
@@ -21,17 +21,17 @@ ForEach-Object -Process {
 
         New-Object PSObject -Property ([ordered]@{
 
-            Server = $guest.VM.Name
+                Server      = $guest.VM.Name
 
-            Path = $_.Path
+                Path        = $_.Path
 
-            CapacityGB = [math]::round($_.CapacityGB)
+                CapacityGB  = [math]::round($_.CapacityGB)
 
-            FreeSpaceGB = [math]::round($_.FreeSpaceGB)
+                FreeSpaceGB = [math]::round($_.FreeSpaceGB)
 
-            Percent = [int]($_.FreeSpaceGB/$_.CapacityGB * 100)  
+                Percent     = [int]($_.FreeSpaceGB / $_.CapacityGB * 100)  
 
-        })
+            })
 
     }
 
@@ -39,7 +39,7 @@ ForEach-Object -Process {
 
 # Informações de Hard Disk.
 write-host ("********** VMDKs **********")
-Get-VM $vmname | Get-HardDisk |FT Parent, Name, CapacityGB -Autosize
+Get-VM $vmname | Get-HardDisk | FT Parent, Name, CapacityGB -Autosize
 
 # Conjunto de variáveis
 $HardDisk = Read-Host "Entre com o nome do VMware Hard Disk (Ex. 1)"
@@ -48,6 +48,6 @@ $HardDiskSize = Read-Host "Digite o tamanho do Hard Disk size em GB (Ex. Se o Ha
 
 # Resultado
 write-host ("************************************************************************************************************************************")
-Get-HardDisk -vm $VM | where {$_.Name -eq $HardDisk} | Set-HardDisk -CapacityGB $HardDiskSize -Confirm:$false
+Get-HardDisk -vm $VM | where { $_.Name -eq $HardDisk } | Set-HardDisk -CapacityGB $HardDiskSize -Confirm:$false
 
 # Próximos passos . . .

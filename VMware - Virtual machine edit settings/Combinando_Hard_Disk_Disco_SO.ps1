@@ -11,22 +11,22 @@ $vmname = read-host "Escreva o nome da VM?"
 write-host ("********** DISCOS LOCAIS DO SO **********")
 
 
-$result = Get-VMGuestDisk -VM $vmname | Foreach-Object{ # Crédito para o mestre "@LucD" da comunidade VMware.
+$result = Get-VMGuestDisk -VM $vmname | Foreach-Object { # Crédito para o mestre "@LucD" da comunidade VMware.
 
     $guestDisk = $_
     $hardDisk = Get-HardDisk -VMGuestDisk $guestDisk
     
     New-Object -TypeName PSObject -Property @{
-        VMName = $hardDisk.Parent
-        VMGuest = $guestDisk.VMGuest
+        VMName      = $hardDisk.Parent
+        VMGuest     = $guestDisk.VMGuest
         DriveLetter = $guestDisk.DiskPath
-        CapacityGB = $guestDisk.CapacityGB
+        CapacityGB  = $guestDisk.CapacityGB
         FreeSpaceGB = $guestDisk.FreeSpaceGB
-        DiskID = $hardDisk.ID
-        DiskName = $hardDisk.Name
-        VMDK = $hardDisk.Filename
-        }
+        DiskID      = $hardDisk.ID
+        DiskName    = $hardDisk.Name
+        VMDK        = $hardDisk.Filename
     }
+}
     
 # Resultado 1
 $result

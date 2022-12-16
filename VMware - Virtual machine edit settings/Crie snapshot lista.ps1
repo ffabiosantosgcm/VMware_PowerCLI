@@ -6,7 +6,7 @@
 
 # Importe VMs de um arquivo .csv e crie snapshot de cada uma das VMs.
 
-Import-Csv "D:\VMware_PowerCLI\Snapshots.csv" | ForEach-Object{ # Crédito para o mestre "@LucD" da comunidade VMware
+Import-Csv "D:\VMware_PowerCLI\Snapshots.csv" | ForEach-Object { # Crédito para o mestre "@LucD" da comunidade VMware
     Get-VM $_.Name | New-Snapshot -Name "Snapshot" -Quiesce:$true -Confirm:$false
 }
 
