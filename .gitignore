@@ -3,4 +3,6 @@ dir_to_ignore/Temp/*
 login.ps1
 operadores.ps1
 comandos.ps1
+stop-task.ps1
+Enable.pdf
 
