@@ -1,4 +1,4 @@
-<img src="https://github.com/ffabiosantosgcm/Instalando-Ansible-AWX-OPERATOR/blob/master/logo-login.svg" style="width:150px;height:150px;">
+<img src="https://github.com/ffabiosantosgcm/VMware_PowerCLI/blob/main/VMware-vSphere-7.jpg" style="width:150px;height:150px;">
 
 ## VMware PowerCLI
 
