@@ -1,2 +1,36 @@
-# VMware_PowerCLI
- VMware_PowerCLI
+<img src="https://github.com/ffabiosantosgcm/Instalando-Ansible-AWX-OPERATOR/blob/master/logo-login.svg" style="width:150px;height:150px;">
+
+## VMware PowerCLI
+
+## Arquivos
+
+* Add Hard Disks.ps1
+* Combinando_Hard_Disk_Disco_SO.ps1
+* Crie snapshot lista.ps1
+* Delete snapshot lista.ps1
+* Deploy_VMs_Template.ps1
+* Increase Hard Disk Virtual Machine_ver2.ps1
+* Increase Hard Disk Virtual Machine.ps1
+* Instale VMware Tools Windows.ps1
+* Interagindo_com_Snapshot.ps1
+* login_vCenter.ps1
+* Set-ScsiController.ps1
+* Update VMware Tools.ps1
+
+## Arquivos com descrição
+- `Add Hard Disks.ps1` - ...
+- `'Combinando_Hard_Disk_Disco_SO.ps1` - ...
+- `Crie snapshot lista.ps1` - ...
+- `Deploy_VMs_Template.ps1` - ...
+- `Increase Hard Disk Virtual Machine_ver2.ps1` - ...
+- `Increase Hard Disk Virtual Machine.ps1` - ...
+- `Instale VMware Tools Windows.ps1` - ...
+- `Interagindo_com_Snapshot.ps1` - ...
+- `login_vCenter.ps1` - ...
+- `Set-ScsiController.ps1` - ...
+- `Update VMware Tools.ps1` - ...
+
+## Change Log
+
+### 24/06/2023
+* Atualização arquivo Readme.
