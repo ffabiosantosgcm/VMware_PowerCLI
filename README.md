@@ -1,4 +1,4 @@
-<img src="https://github.com/ffabiosantosgcm/VMware_PowerCLI/blob/main/VMware-vSphere-7.jpg" style="width:150px;height:150px;">
+<img src="https://github.com/ffabiosantosgcm/VMware_PowerCLI/blob/main/vSphere-Icon.png" style="width:150px;height:150px;">
 
 ## VMware PowerCLI
 
