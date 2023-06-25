@@ -2,24 +2,9 @@
 
 ## VMware PowerCLI
 
-## Arquivos
-
-* Add Hard Disks.ps1
-* Combinando_Hard_Disk_Disco_SO.ps1
-* Crie snapshot lista.ps1
-* Delete snapshot lista.ps1
-* Deploy_VMs_Template.ps1
-* Increase Hard Disk Virtual Machine_ver2.ps1
-* Increase Hard Disk Virtual Machine.ps1
-* Instale VMware Tools Windows.ps1
-* Interagindo_com_Snapshot.ps1
-* login_vCenter.ps1
-* Set-ScsiController.ps1
-* Update VMware Tools.ps1
-
 ## Arquivos com descrição
 - `Add Hard Disks.ps1` - ...
-- `'Combinando_Hard_Disk_Disco_SO.ps1` - ...
+- `Combinando_Hard_Disk_Disco_SO.ps1` - ...
 - `Crie snapshot lista.ps1` - ...
 - `Deploy_VMs_Template.ps1` - ...
 - `Increase Hard Disk Virtual Machine_ver2.ps1` - ...
