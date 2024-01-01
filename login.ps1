@@ -1,1 +1,1 @@
-Connect-VIServer -Server vc7.virtualizandoaju.com.br -User administrator@vsphere.local -Password "!Q@W1q2w"
+Connect-VIServer -Server vcenter8a.virtualizandoaju.com.br -User administrator@vsphere.local -Password "!Q@W1q2w"
