@@ -1,0 +1,43 @@
+formatVersion: 1
+inputs:
+  installedOS:
+    type: string
+    title: Operating system
+    description: Select the operating system.
+    enum:
+      - ARIA_WindowsServer2022
+  size:
+    type: string
+    title: Deployment size
+    description: Select the the deployment t-shirt size.
+    enum:
+      - 'Small: 2 vCPU w/ 4GB RAM'
+  Ambiente:
+    type: string
+    title: Selecione uma tag correspondente a um portgroup
+    description: Selecione uma tag correspondente a um portgroup
+    $dynamicEnum: /data/vro-actions/com.vmware.library.vra/SelectNetworkTags
+  Network:
+    type: string
+    title: Portgroup selecionado automaticamente
+    description: Portgroup selecionado automaticamente
+    $dynamicEnum: /data/vro-actions/com.vmware.library.vra/SelectNetwork?ambiente={{Ambiente}}
+resources:
+  Cloud_vSphere_Machine_1:
+    type: Cloud.vSphere.Machine
+    properties:
+      image: ${input.installedOS}
+      installedOS: ${input.installedOS}
+      flavor: ${input.size}
+      #customizationSpec: ARIA_WINDOWS
+      networks:
+        - network: ${resource.Cloud_Network_1.id}
+          assignment: static
+          assignIPv6Address: false
+          assignPublicIpAddress: false
+  Cloud_Network_1:
+    type: Cloud.Network
+    properties:
+      networkType: existing
+      constraints:
+        - tag: ${'Environment:' + (input.Ambiente)}
